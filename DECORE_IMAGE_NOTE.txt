@@ -1,0 +1,1 @@
+DECORE HOMEZ front project image set: generated original interior visuals, stored locally in assets/. The page uses a distinct hero plus five project images and does not depend on external stock-image URLs.

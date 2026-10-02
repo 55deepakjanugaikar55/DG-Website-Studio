@@ -1,3 +1,4 @@
-DG Website Studio - image fix
-All demo folders are flattened for GitHub Pages and local asset paths are relative.
-Decore Homez keeps its original local SVG assets. Other demos include local project-cover.svg fallbacks.
+DG Website Studio image fix v2
+- Replaced broken external Unsplash image URLs in all demos with local image files.
+- Local assets are stored inside each project's assets folder.
+- Designed to work on GitHub Pages without relying on external image URLs.
