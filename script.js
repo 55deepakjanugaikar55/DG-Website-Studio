@@ -1,17 +1,1 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-
-const form = document.getElementById("enquiryForm");
-form.addEventListener("submit", function(e){
-  e.preventDefault();
-  const name = document.getElementById("name").value.trim();
-  const phone = document.getElementById("phone").value.trim();
-  const message = document.getElementById("message").value.trim();
-  const text = `Hi MexiChino,%0A%0A*New Website Enquiry*%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AMessage: ${encodeURIComponent(message)}`;
-  window.open(`https://wa.me/?text=${text}`, "_blank");
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener("click",()=>{
-    document.querySelector(".nav")?.classList.remove("open");
-  });
-});
+document.querySelector('.menu')?.addEventListener('click',()=>{const n=document.querySelector('.nav nav');n.style.display=n.style.display==='flex'?'none':'flex';n.style.flexDirection='column';n.style.position='absolute';n.style.right='6%';n.style.top='70px';n.style.background='#f6f3ee';n.style.padding='18px';n.style.border='1px solid #ddd7cf';n.style.borderRadius='12px'});

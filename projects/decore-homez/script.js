@@ -1,0 +1,2 @@
+function sendWhatsApp(e){e.preventDefault();const name=document.getElementById('name').value;const type=document.getElementById('type').value;const message=document.getElementById('message').value;const text=`Hello Decore Homez, my name is ${name}. I am interested in ${type}. ${message}`;window.open('?text='+encodeURIComponent(text),'_blank')}
+document.getElementById('year').textContent=new Date().getFullYear();

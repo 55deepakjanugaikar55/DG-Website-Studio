@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaffeine — Cafe & Kitchen | Borivali</title>
+<meta name="description" content="Kaffeine Cafe & Kitchen — a modern vegetarian cafe in Borivali West, Mumbai. Coffee, comfort food and a warm space to slow down.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#201b17;--cream:#f5efe6;--paper:#fffaf3;--coffee:#5b3926;--gold:#c99b5b;--sage:#71806a;--line:#ded3c5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(255,250,243,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(32,27,23,.08)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Playfair Display";font-size:25px;font-weight:700;letter-spacing:.4px}.brand span{color:var(--gold)}
+.navlinks{display:flex;gap:28px;font-size:14px}.navlinks a:hover{color:var(--coffee)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 20px;font-weight:700;font-size:14px;transition:.25s;border:1px solid transparent}.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{transform:translateY(-2px);background:var(--coffee)}.btn-light{border-color:var(--ink)}.btn-light:hover{background:var(--ink);color:white}
+.hero{min-height:92vh;padding-top:76px;display:grid;grid-template-columns:1.03fr .97fr;gap:38px;align-items:center;background:radial-gradient(circle at 85% 25%,#ead9c1 0,transparent 30%),var(--cream)}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:700;color:var(--sage);margin-bottom:18px}.hero h1{font-family:"Playfair Display";font-size:clamp(54px,7vw,92px);line-height:.94;margin:0 0 24px;letter-spacing:-3px}.hero h1 em{font-weight:500;color:var(--coffee)}.hero p{max-width:560px;font-size:18px;color:#625a52;margin-bottom:30px}.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-img{height:620px;border-radius:28px 28px 110px 28px;overflow:hidden;box-shadow:0 25px 70px rgba(48,32,18,.18);position:relative}.hero-img img{width:100%;height:100%;object-fit:cover}.hero-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(26,18,12,.48))}
+.badge{position:absolute;z-index:2;bottom:26px;left:26px;color:white}.badge b{display:block;font-family:"Playfair Display";font-size:25px}.badge small{opacity:.85}
+.section{padding:100px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:var(--sage);font-weight:700}.section h2{font-family:"Playfair Display";font-size:48px;line-height:1.05;margin:8px 0 0}.muted{color:#6d655e;max-width:500px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:28px;border:1px solid var(--line);border-radius:22px;background:#fffdf9}.icon{font-size:28px;margin-bottom:18px}.feature h3{margin:0 0 7px;font-family:"Playfair Display";font-size:24px}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.dish{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;justify-content:space-between;gap:20px}.dish h3{margin:0 0 5px;font-size:18px}.dish p{margin:0;color:#756c63;font-size:14px}.tag{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--sage);font-weight:700;white-space:nowrap}
+.gallery{display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:280px 280px;gap:14px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:22px}.gallery .big{grid-row:span 2}
+.story{background:var(--coffee);color:#fff}.story .kicker{color:#e2bf8d}.storygrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}.story h2{font-size:55px}.story p{color:#e7ddd3;font-size:17px}.quote{border-left:2px solid var(--gold);padding-left:25px;margin-top:30px;font-family:"Playfair Display";font-size:25px;color:#fff}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{padding:30px;border:1px solid var(--line);border-radius:24px;background:#fff}.card h3{font-family:"Playfair Display";font-size:28px;margin:0 0 15px}.detail{padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}.detail:last-child{border-bottom:0}.detail b{display:block;margin-bottom:3px}
+footer{padding:35px 0;border-top:1px solid var(--line);font-size:13px;color:#71675e}.footer{display:flex;justify-content:space-between;gap:20px}
+.mobile{display:none}
+@media(max-width:850px){.navlinks{display:none}.mobile{display:block}.hero{grid-template-columns:1fr;padding-top:110px}.hero-img{height:440px}.features,.menu-grid,.visit,.storygrid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:210px 210px}.section-head{display:block}.storygrid{gap:30px}.hero h1{font-size:62px}.footer{display:block}}
+</style>
+</head>
+<body>
+<nav><div class="wrap nav">
+<a class="brand" href="#">Kaffeine<span>•</span></a>
+<div class="navlinks"><a href="#about">About</a><a href="#menu">Highlights</a><a href="#space">The Space</a><a href="#visit">Visit</a></div>
+<a class="btn btn-dark mobile" href="tel:">Call</a>
+</div></nav>
+
+<header class="hero">
+<div class="wrap" style="padding-right:0">
+<div class="eyebrow">Cafe & Kitchen · Borivali West</div>
+<h1>Your daily<br><em>dose of good.</em></h1>
+<p>A warm, modern vegetarian cafe for coffee, comfort food, conversations and unhurried evenings in the heart of Borivali.</p>
+<div class="actions"><a class="btn btn-dark" href="#visit">Plan Your Visit →</a><a class="btn btn-light" href="#menu">Explore Highlights</a></div>
+</div>
+<div class="hero-img">
+<img src="https://b.zmtcdn.com/data/pictures/3/21522663/57f66c568ebdc51ba7d98c566eb3ec01.jpeg" alt="Kaffeine Cafe & Kitchen exterior">
+<div class="badge"><b>Kaffeine Cafe & Kitchen</b><small>Shimpoli Road · Borivali West</small></div>
+</div>
+</header>
+
+<section class="section" id="about"><div class="wrap">
+<div class="section-head"><div><div class="kicker">Why Kaffeine</div><h2>Come for the coffee.<br>Stay for the mood.</h2></div><p class="muted">A relaxed space designed for catch-ups, family meals, casual work sessions and those “one more coffee” conversations.</p></div>
+<div class="features">
+<div class="feature"><div class="icon">☕</div><h3>Coffee & coolers</h3><p>From everyday coffee rituals to indulgent shakes and refreshing drinks.</p></div>
+<div class="feature"><div class="icon">🍴</div><h3>All-veg kitchen</h3><p>A broad menu inspired by Indian, Continental, Italian and Asian favourites.</p></div>
+<div class="feature"><div class="icon">⌂</div><h3>Room to linger</h3><p>Indoor and outdoor seating with a bright, contemporary atmosphere.</p></div>
+</div></div></section>
+
+<section class="section" id="menu" style="background:var(--cream)"><div class="wrap">
+<div class="section-head"><div><div class="kicker">A taste of Kaffeine</div><h2>Guest favourites<br>& menu highlights</h2></div><p class="muted">A visual showcase for the website demo. Final menu names, descriptions and prices can be connected to the café’s current menu.</p></div>
+<div class="menu-grid">
+<div class="dish"><div><h3>Pesto Hummus & Pita</h3><p>Fresh, creamy and made for sharing.</p></div><span class="tag">Starter</span></div>
+<div class="dish"><div><h3>Tandoori Paneer Pizza</h3><p>A café-style take on a familiar favourite.</p></div><span class="tag">Pizza</span></div>
+<div class="dish"><div><h3>Cinnamon Caramel Iced Latte</h3><p>Cold, creamy and coffee-forward.</p></div><span class="tag">Coffee</span></div>
+<div class="dish"><div><h3>Belgian Chocolate Shake</h3><p>Rich, indulgent and made for sweet cravings.</p></div><span class="tag">Shake</span></div>
+<div class="dish"><div><h3>Ramen Noodles</h3><p>Warm, comforting and full of flavour.</p></div><span class="tag">Asian</span></div>
+<div class="dish"><div><h3>Strawberry Tres Leches</h3><p>A soft, creamy finish to the meal.</p></div><span class="tag">Dessert</span></div>
+</div>
+</div></section>
+
+<section class="section" id="space"><div class="wrap">
+<div class="section-head"><div><div class="kicker">The Kaffeine space</div><h2>Made for slow<br>afternoons & long talks.</h2></div><p class="muted">Bright interiors, warm wood, greenery and generous windows give the space a calm, modern character.</p></div>
+<div class="gallery">
+<img class="big" src="https://b.zmtcdn.com/data/pictures/3/21522663/57f66c568ebdc51ba7d98c566eb3ec01.jpeg" alt="Kaffeine exterior">
+<img src="https://b.zmtcdn.com/data/pictures/3/21522663/57f66c568ebdc51ba7d98c566eb3ec01.jpeg" alt="Kaffeine cafe">
+<img src="https://images.unsplash.com/photo-d71bcdd2085?auto=format&fit=crop&w=1000&q=85" alt="Coffee">
+</div></div></section>
+
+<section class="section story"><div class="wrap storygrid"><div><div class="kicker">The feeling</div><h2>A little pause<br>in a busy city.</h2></div><div><p>Kaffeine brings together food, coffee and a welcoming setting where you can meet friends, work for a while, or simply take a break.</p><div class="quote">“Good food. Good coffee. Good company.”</div></div></div></section>
+
+<section class="section" id="visit"><div class="wrap">
+<div class="section-head"><div><div class="kicker">Come by</div><h2>Find your way<br>to Kaffeine.</h2></div><p class="muted">Open daily. For the latest timings or table information, call the café directly.</p></div>
+<div class="visit">
+<div class="card"><h3>Visit</h3>
+<div class="detail"><b>Address</b>Shop No 1, Ground & First Floor, Sakshat, Navkar Paradise, Shimpoli Rd, opposite Mega Party Hall, Mini Zaveri Bazaar, Mhatre Wadi, Borivali West, Mumbai 400092</div>
+<div class="detail"><b>Hours</b>11:00 AM – 12:00 AM · Daily</div>
+<div class="detail"><b></b><a href="tel:"></a></div>
+<div class="actions" style="margin-top:20px"><a class="btn btn-dark" target="_blank" href="https://maps.google.com/?q=Kaffeine%20Cafe%20%26%20Kitchen%20Borivali%20West">Get Directions ↗</a><a class="btn btn-light" href="tel:">Call Café</a></div>
+</div>
+<div class="card" style="background:var(--cream)"><h3>Quick enquiry</h3><p class="muted">This demo form is intentionally offline so it won't send real enquiries to the café while you are showing the website.</p>
+<form onsubmit="sendDemoWhatsApp(event)">
+<div class="detail"><b>Name</b><input id="demoName" required placeholder="Your name" style="width:100%;padding:12px;border:1px solid #cfc2b3;border-radius:10px;background:#fff"></div>
+<div class="detail"><b>Phone / </b><input id="demoPhone" required placeholder="Your number" style="width:100%;padding:12px;border:1px solid #cfc2b3;border-radius:10px;background:#fff"></div>
+<div class="detail"><b>Message</b><textarea id="demoMessage" placeholder="Table enquiry, event, feedback..." style="width:100%;min-height:90px;padding:12px;border:1px solid #cfc2b3;border-radius:10px;background:#fff"></textarea></div>
+<button class="btn btn-dark" type="submit">Send Enquiry →</button>
+<p style="font-size:12px;color:#756c63;margin-top:12px">Demo enquiry will open WhatsApp to the website owner's number.</p>
+</form></div>
+</div></div></section>
+
+<footer><div class="wrap footer"><div>© 2026 Kaffeine Cafe & Kitchen — Demo website concept</div><div>Designed as a client presentation demo</div></div></footer>
+
+<script>
+function sendDemoWhatsApp(event){
+  event.preventDefault();
+  const name = document.getElementById('demoName').value.trim();
+  const phone = document.getElementById('demoPhone').value.trim();
+  const message = document.getElementById('demoMessage').value.trim() || 'No message provided';
+  const ownerNumber = '';
+  const text =
+    '☕ Kaffeine Website Demo Enquiry%0A%0A' +
+    'Name: ' + encodeURIComponent(name) + '%0A' +
+    'Phone: ' + encodeURIComponent(phone) + '%0A' +
+    'Message: ' + encodeURIComponent(message) + '%0A%0A' +
+    'Source: Kaffeine website demo';
+  window.open('https://wa.me/' + ownerNumber + '?text=' + text, '_blank');
+}
+</script>
+</body>
+</html>
